@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package validator;
+option go_package = "github.com/donkeylichao/protoc-gen-go-validator/validator;validator";
+import "google/protobuf/descriptor.proto";
+
+
+message FieldRules {
+optional string rule = 17;
+}
+extend google.protobuf.FieldOptions {
+optional string rules = 1071;
+}
